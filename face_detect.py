@@ -51,6 +51,7 @@ class FaceDetection(QDialog):
 
 
     def detect_face(self,img):
+        #   TODO  这里可以解释 为什么 检测结果会被显示到 qlabel 上面， 将检测的信息 保留下来 然后传输到 qlabel 上  
         gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
         faces=self.faceCascade.detectMultiScale(gray,1.2,5,minSize=(90,90))
 
